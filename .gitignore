@@ -1,0 +1,5 @@
+example/bundle.js
+node_modules
+dist
+.rts2*
+.env

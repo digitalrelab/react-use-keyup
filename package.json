@@ -1,0 +1,74 @@
+{
+  "name": "@digitalrelab/react-use-keyup",
+  "version": "1.0.0",
+  "description": "React hook for keyup events",
+  "keywords": [
+    "react",
+    "hooks",
+    "use",
+    "keyup"
+  ],
+  "author": "DigitalReLab, LLC.",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "microbundle watch",
+    "build": "microbundle",
+    "commit": "git-cz",
+    "release": "yarn build && ./release.sh"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "release": {
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      [
+        "@semantic-release/changelog",
+        {
+          "changelogFile": "CHANGELOG.md"
+        }
+      ],
+      [
+        "@semantic-release/npm",
+        {
+          "tarballDir": "dist"
+        }
+      ],
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "CHANGELOG.md",
+            "package.json",
+            "./dist/**/*.{js,ts}"
+          ]
+        }
+      ]
+    ]
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^3.0.2",
+    "@semantic-release/git": "^7.0.8",
+    "@semantic-release/release-notes-generator": "^7.1.4",
+    "@types/react": "^16.8.15",
+    "@typescript-eslint/eslint-plugin": "^1.7.0",
+    "@typescript-eslint/parser": "^1.7.0",
+    "commitizen": "^3.1.1",
+    "cz-conventional-changelog": "^2.1.0",
+    "eslint": "^5.16.0",
+    "microbundle": "^0.11.0",
+    "prettier": "^1.17.0",
+    "semantic-release": "^15.13.3",
+    "typescript": "^3.4.5"
+  },
+  "peerDependencies": {
+    "react": "^16.8.6"
+  },
+  "dependencies": {
+    "keycode": "^2.2.0"
+  }
+}
