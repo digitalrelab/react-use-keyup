@@ -1,22 +1,24 @@
-# react-use-hotkeys
+# react-use-keyup
 
-A simple [hotkeys](https://github.com/jaywcjlove/hotkeys) hook for [React](https://reactjs.org).
+A simple keyUp hook for [React](https://reactjs.org).
 
 ## Installation
 
 ```bash
-yarn add @digitalrelab/react-use-hotkeys
+yarn add @digitalrelab/react-use-keyup
 ```
 
 ## Usage
 
 ```jsx
-import { useHotkeys } from "@digitalrelab/react-use-hotkeys"
+import { useKeyUp } from "@digitalrelab/react-use-keyup"
 
 function App() {
-  useHotkeys("esc", onEsc)
+  useKeyUp("esc", onEsc)
 
-  function onEsc(keyboardEvent, hotkeysEvent) {
+  function onEsc(event) {
+    event.preventDefault()
+
     console.log("You just pressed esc.")
   }
 
