@@ -1,0 +1,2 @@
+!function(e,t){"object"==typeof exports&&"undefined"!=typeof module?t(exports,require("react")):"function"==typeof define&&define.amd?define(["exports","react"],t):t(e.reactUseKeyup={},e.react)}(this,function(e,t){var n=require("../node_modules/keycode/index");e.useKeyUp=function(e,o){function i(t){t.preventDefault(),t.stopPropagation(),t.stopImmediatePropagation(),t.which===n(e)&&o(t)}t.useEffect(function(){return document.addEventListener("keyup",i,!0),function(){document.removeEventListener("keyup",i,!0)}},[e])}});
+//# sourceMappingURL=index.umd.js.map
