@@ -21,14 +21,11 @@ export function useKeyUp(key: string, onKeyUp: TOnKeyUp): void {
     event.stopImmediatePropagation()
 
     if (event.which === keycode(key)) {
-      console.log("bubbling?", onKeyUp)
       onKeyUp(event)
     }
   }
 
   useEffect(() => {
-    console.log("add event listener", key)
-
     document.addEventListener("keyup", handleKeyUp, true)
 
     return () => {
