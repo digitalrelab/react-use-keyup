@@ -8,11 +8,10 @@ import { useEffect } from "react"
 const keycode = require("../node_modules/keycode/index")
 
 /**
- * useHotkeys is a React hook for the awesome hotkeys-js library.
- * To learn more, please refer to https://github.com/jaywcjlove/hotkeys
+ * useKeyUp is a React hook that binds keyup events.
  *
- * @param hotKeys The list of hotkeys that will be listen to.
- * @param onExecuteHotKey  A callback that occurs upon any hotKey execution.
+ * @param key The key that you want to listen to.
+ * @param onKeyUp What happens when the user hits that key.
  */
 export function useKeyUp(key: string, onKeyUp: TOnKeyUp): void {
   function handleKeyUp(event: KeyboardEvent) {
