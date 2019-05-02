@@ -1,2 +1,2 @@
-var e=require("react"),t=require("../node_modules/keycode/index");exports.useKeyUp=function(n,o){function r(e){e.preventDefault(),e.stopPropagation(),e.stopImmediatePropagation(),e.which===t(n)&&o(e)}e.useEffect(function(){return document.addEventListener("keyup",r,!0),function(){document.removeEventListener("keyup",r,!0)}},[n])};
+var e,t=require("react"),n=(e=require("keycode"))&&"object"==typeof e&&"default"in e?e.default:e;exports.useKeyUp=function(e,o){function u(t){t.preventDefault(),t.stopPropagation(),t.stopImmediatePropagation(),t.which===n(e)&&o(t)}t.useEffect(function(){return document.addEventListener("keyup",u,!0),function(){document.removeEventListener("keyup",u,!0)}},[e])};
 //# sourceMappingURL=index.js.map
