@@ -11,6 +11,10 @@
   "author": "DigitalReLab, LLC.",
   "license": "MIT",
   "main": "dist/index.js",
+  "source": "src/index.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "microbundle watch",
     "build": "microbundle",
