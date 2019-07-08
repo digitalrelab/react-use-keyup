@@ -13,8 +13,6 @@ import keycode from "keycode"
 export function useKeyUp(key: string, onKeyUp: TOnKeyUp): void {
   function handleKeyUp(event: KeyboardEvent): void {
     event.preventDefault()
-    event.stopPropagation()
-    event.stopImmediatePropagation()
 
     if (event.which === keycode(key)) {
       onKeyUp(event)
