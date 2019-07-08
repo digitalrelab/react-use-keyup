@@ -45,4 +45,4 @@ export function useKeyUp(
 
 type TOnKeyUp = (keyboardEvent: KeyboardEvent) => void
 
-type TAvailableKeys = "esc" | "enter" | "arrowup" | "arrowdown"
+type TAvailableKeys = "esc" | "enter" | "up" | "down"
