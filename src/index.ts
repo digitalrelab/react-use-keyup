@@ -10,7 +10,10 @@ import keycode from "keycode"
  * @param key The key that you want to listen to.
  * @param onKeyUp What happens when the user hits that key.
  */
-export function useKeyUp(key: string, onKeyUp: TOnKeyUp): void {
+export function useKeyUp(
+  key: TAvailableKeys | string,
+  onKeyUp: TOnKeyUp,
+): void {
   function handleKeyUp(event: KeyboardEvent): void {
     event.preventDefault()
 
@@ -29,3 +32,5 @@ export function useKeyUp(key: string, onKeyUp: TOnKeyUp): void {
 }
 
 type TOnKeyUp = (keyboardEvent: KeyboardEvent) => void
+
+type TAvailableKeys = "esc" | "enter"
