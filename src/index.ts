@@ -17,9 +17,7 @@ export function useKeyUp(
   targetKey: TAvailableKeys | string,
   onKeyUp: TOnKeyUp,
 ): void {
-  function handleKeyUp(event: KeyboardEvent): void {
-    event.preventDefault()
-
+  const handleKeyUp = (event: KeyboardEvent): void => {
     const keycodeBasedOnKey = keycode(targetKey)
 
     if (!keycodeBasedOnKey) {
@@ -40,7 +38,7 @@ export function useKeyUp(
     return (): void => {
       document.removeEventListener("keyup", handleKeyUp, true)
     }
-  }, [targetKey])
+  }, [targetKey, onKeyUp])
 }
 
 type TOnKeyUp = (keyboardEvent: KeyboardEvent) => void
