@@ -17,7 +17,7 @@ export function useKeyUp(
   targetKey: TAvailableKeys | string,
   onKeyUp: TOnKeyUp,
 ): void {
-  const handleKeyUp = (event: KeyboardEvent): void => {
+  function handleKeyUp(event: KeyboardEvent): void {
     const keycodeBasedOnKey = keycode(targetKey)
 
     if (!keycodeBasedOnKey) {
