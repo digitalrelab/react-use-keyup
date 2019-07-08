@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/digitalrelab/react-use-keyup/compare/v1.1.0...v1.2.0) (2019-07-08)
+
+
+### Features
+
+* 🎸 add refreshable dependencies ([ec7cd93](https://github.com/digitalrelab/react-use-keyup/commit/ec7cd93))
+
 # [1.1.0](https://github.com/digitalrelab/react-use-keyup/compare/v1.0.1...v1.1.0) (2019-07-08)
 
 

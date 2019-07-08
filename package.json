@@ -1,6 +1,6 @@
 {
   "name": "@digitalrelab/react-use-keyup",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "React hook for keyup events",
   "keywords": [
     "react",
