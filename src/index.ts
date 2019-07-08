@@ -11,7 +11,7 @@ import keycode from "keycode"
  * @param onKeyUp What happens when the user hits that key.
  */
 export function useKeyUp(key: string, onKeyUp: TOnKeyUp): void {
-  function handleKeyUp(event: KeyboardEvent) {
+  function handleKeyUp(event: KeyboardEvent): void {
     event.preventDefault()
     event.stopPropagation()
     event.stopImmediatePropagation()
@@ -21,10 +21,10 @@ export function useKeyUp(key: string, onKeyUp: TOnKeyUp): void {
     }
   }
 
-  useEffect(() => {
+  useEffect((): (() => void) => {
     document.addEventListener("keyup", handleKeyUp, true)
 
-    return () => {
+    return (): void => {
       document.removeEventListener("keyup", handleKeyUp, true)
     }
   }, [key])
