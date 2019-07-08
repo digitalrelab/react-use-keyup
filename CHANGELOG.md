@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/digitalrelab/react-use-keyup/compare/v1.2.0...v1.2.1) (2019-07-08)
+
+
+### Bug Fixes
+
+* 🐛 remove fat arrow to prevent mishoist ([37f1e61](https://github.com/digitalrelab/react-use-keyup/commit/37f1e61))
+
 # [1.2.0](https://github.com/digitalrelab/react-use-keyup/compare/v1.1.0...v1.2.0) (2019-07-08)
 
 
