@@ -70,7 +70,7 @@
     "git-cz": "^3.2.1",
     "microbundle": "^0.11.0",
     "prettier": "^1.18.2",
-    "semantic-release": "^15.13.3",
+    "semantic-release": "^17.2.3",
     "typescript": "^3.4.5"
   },
   "peerDependencies": {
